@@ -202,6 +202,93 @@
             
 
   
+    <article id="post-java/动态绑定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" target="_blank">面向对象</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" class="archive-article-date">
+        <time datetime="2020-06-10T03:42:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="Java静态绑定"><a href="#Java静态绑定" class="headerlink" title="Java静态绑定"></a>Java静态绑定</h3><pre><code>在程序执行以前已经被绑定（即在编译过程中就已经知道这个方法到底是哪个类中的方法）。 
+
+Java当中的方法只有final、static、private修饰的的方法和构造方法是静态绑定的。</code></pre><p><img src="....%5Cimg%5Cjava%5C%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A.png" alt="1591796136902"> </p>
+<p>此图可以看出重写final,static 的方法会编译不通过，private修饰方法虽然没有编译不通过但是可以经过测试发现对应对象执行对应方法</p>
+<h3 id="Java动态绑定"><a href="#Java动态绑定" class="headerlink" title="Java动态绑定"></a>Java动态绑定</h3><p> 在运行时期根据具体对象的类型进行绑定。 </p>
+<p> 动态绑定的过程： </p>
+<p>​    1.虚拟机提取对象实际类型的方法表</p>
+<p>​    2.虚拟机搜索方法签名</p>
+<p>​    3.调用方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Father</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"父亲吃饭"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Father father = <span class="keyword">new</span> Father();</span><br><span class="line">        Son son = <span class="keyword">new</span> Son();</span><br><span class="line">        father.work();</span><br><span class="line">        father.eat();</span><br><span class="line">        System.out.println(<span class="string">"============="</span>);</span><br><span class="line">        son.work();</span><br><span class="line">        son.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span>  <span class="title">Father</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"儿子吃饭"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<p><img src="....%5Cimg%5Cjava%5C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A.png" alt="1591796843477"></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java/oop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
