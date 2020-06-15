@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://nepentheszgw.github.io/img/java/%E9%9B%86%E5%90%88%E6%A6%82%E8%BF%B0.png">
 <meta property="og:image" content="https://nepentheszgw.github.io/img/java/%E9%9B%86%E5%90%88%E7%89%B9%E7%82%B9.png">
 <meta property="article:published_time" content="2020-06-11T12:28:52.000Z">
-<meta property="article:modified_time" content="2020-06-11T14:44:30.363Z">
+<meta property="article:modified_time" content="2020-06-12T11:57:59.080Z">
 <meta property="article:author" content="忘忧症">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://nepentheszgw.github.io/img/java/%E9%9B%86%E5%90%88%E6%A6%82%E8%BF%B0.png">
@@ -235,7 +235,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">550字</span>
+      <span class="post-count">1.1k字</span>
     </span>
   </span>
 
@@ -244,7 +244,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -272,6 +272,35 @@
 <h5 id="list的使用场景"><a href="#list的使用场景" class="headerlink" title="list的使用场景"></a>list的使用场景</h5><p>查询某一个元素复杂度是n，但是有顺序，所以放进去之后需按顺序读取出来那就使用list</p>
 <h5 id="map的场景："><a href="#map的场景：" class="headerlink" title="map的场景："></a>map的场景：</h5><p> 如一个班的学生的学号与姓名的映射，每个学号对应了一个学生的姓名，学号不能重复，但是姓名可能会重复； </p>
 <p>简答来说，就是一个数据需要以键值对来存储，并且键不重复，那么使用map</p>
+<h3 id="3-事务概念"><a href="#3-事务概念" class="headerlink" title="3 事务概念"></a>3 事务概念</h3><p> <strong>事务指逻辑上的一组操作，组成这组操作的各个单元，要不全部成功，要不全部不成功</strong>。 </p>
+<p>声明式事务的流程：</p>
+<ol>
+<li><p>在容器配置类上使用@EnableTransactionManagement注解，该注解在容器中注册了两大组件——AutoProxyRegistrar、ProxyTransactionManagementConfiguration；</p>
+</li>
+<li><p>AutoProxyRegistrar通过导入方式在容器中注册了InfrastructureAdvisorAutoProxyCreator，这是一个后置处理器；</p>
+</li>
+<li><p>ProxyTransactionManagementConfiguration本身就是一个容器配置类，它注册了transactionAdvisor(事务增强器)，然后又在这个事务增强器中注入了两个属性transactionAttributeSource、transactionInterceptor；</p>
+</li>
+<li><p>transactionAttributeSource用于解析@Transactional注解的各种属性；</p>
+</li>
+<li><p>transactionInterceptor实现了MethodInterceptor，是一个拦截器链，这个拦截器链会从容器中获取事务管理器，利用事务管理器，在目标方法发生异常时执行回滚，在目标发生正常完成后提交事务；</p>
+</li>
+<li><p>第2步的InfrastructureAdvisorAutoProxyCreator后置处理器，会在目标对象创建完成之后将其包装为代理对象，代理对象在执行目标方法时会首先获取拦截器链，这个拦截器链就是第5步的transactionInterceptor。</p>
+</li>
+</ol>
+<p>以后自己看源码在详说</p>
+<h3 id="4-Exception是个什么东西，有什么用"><a href="#4-Exception是个什么东西，有什么用" class="headerlink" title="4 Exception是个什么东西，有什么用"></a>4 Exception是个什么东西，有什么用</h3><p>这里我懵了，其实很简单</p>
+<p>他在java里面是所有异常的基类，任何自定义的异常都要继承它，</p>
+<p>作用在于，你判断程序某一个地方可能出现一些你能够预测到的结果时，使用异常处理机制，能够让程序正常执行</p>
+<h3 id="5-查询A、B表中，A表中存在B表不存在的数据"><a href="#5-查询A、B表中，A表中存在B表不存在的数据" class="headerlink" title="5 查询A、B表中，A表中存在B表不存在的数据"></a>5 查询A、B表中，A表中存在B表不存在的数据</h3><h5 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h5><p>　使用 not in ,容易理解,效率低 <del>执行时间为：1.395秒</del> (第一种方法亲测可用)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 select distinct A.ID from  A where A.ID not in (select ID from B)</span><br></pre></td></tr></table></figure>
+
+<p>　　用 left join…on… , “B.ID isnull” 表示左连接之后在B.ID 字段为 null的记录 <del>执行时间：0.739秒</del></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 select A.ID from A left join B on A.ID&#x3D;B.ID where B.ID is null</span><br></pre></td></tr></table></figure>
+
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><h3 id="6-什么时候使用线程"><a href="#6-什么时候使用线程" class="headerlink" title="6 什么时候使用线程"></a>6 什么时候使用线程</h3><p>不需要知道执行结果的操作使用线程，会发生阻塞的地方可以使用线程</p>
+<p> 对于<strong>处理时间短的服务</strong>或者<strong>启动频率高</strong>的要用单线程，相反用多线程！ </p>
+<h3 id="7-eclipse和Intellij"><a href="#7-eclipse和Intellij" class="headerlink" title="7 eclipse和Intellij"></a>7 eclipse和Intellij</h3><p>这里不解释，每个人都有自己喜欢用的</p>
 
     
 
@@ -399,6 +428,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2020/06/11/database/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B8%82%E9%9D%A2%E4%B8%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          三种主流数据库的区别
+        
+      </div>
+    </a>
   
   
     <a href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/" id="article-nav-older" class="article-nav-link-wrap">
