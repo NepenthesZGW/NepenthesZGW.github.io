@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://NepenthesZGW.github.io">
-  <title>忘忧症的博客</title>
+  <title>RocketMQ搭建 | 忘忧症的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="忘忧症的博客">
-<meta property="og:url" content="https://nepentheszgw.github.io/index.html">
+  <meta name="description" content="RocketMQRocketMQ是基于（kafka）MetaQ的内核，对其进行了优化让其更满足互联网公司的特点。 纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。  RocketMQ目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RocketMQ搭建">
+<meta property="og:url" content="https://nepentheszgw.github.io/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="忘忧症的博客">
+<meta property="og:description" content="RocketMQRocketMQ是基于（kafka）MetaQ的内核，对其进行了优化让其更满足互联网公司的特点。 纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。  RocketMQ目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。">
 <meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-06-16T02:28:52.000Z">
+<meta property="article:modified_time" content="2020-06-16T16:47:49.319Z">
 <meta property="article:author" content="忘忧症">
 <meta name="twitter:card" content="summary">
   
@@ -199,25 +199,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-framework/RocketMQ/RocketMQ搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-framework/RocketMQ/RocketMQ搭建" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/" target="_blank">RocketMQ搭建</a>
-  
+    <h1 class="article-title" itemprop="name">
+      RocketMQ搭建
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/" class="archive-article-date">
         <time datetime="2020-06-16T02:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-16</time>
 </a>
@@ -225,6 +225,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">997字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -234,13 +255,87 @@
     <h3 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h3><p>RocketMQ是基于（kafka）MetaQ的内核，对其进行了优化让其更满足互联网公司的特点。</p>
 <p>纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。</p>
 <p> RocketMQ目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。 </p>
-    
-    <a class="article-more-a" href="/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/#more">more >></a>
-    
-    
+<a id="more"></a>
+
+<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="http://rocketmq.apache.org/" target="_blank" rel="noopener">http://rocketmq.apache.org</a></p>
+<p><strong>GitHub</strong></p>
+<p><a href="https://github.com/apache/rocketmq" target="_blank" rel="noopener">https://github.com/apache/rocketmq</a></p>
+<h3 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h3><p>CentOS7   Xshell   Xftp 6</p>
+<h5 id="Java-JDK环境"><a href="#Java-JDK环境" class="headerlink" title="Java JDK环境"></a>Java JDK环境</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install wget -y</span><br><span class="line">wget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.rpm</span><br><span class="line"><span class="meta">#</span><span class="bash">地址可能会变，小伙伴注意一下</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rpm -ivh jdk-8u181-linux-x64.rpm</span><br><span class="line"></span><br><span class="line">vi /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line">export JAVA_HOME=/usr/java/default</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">检测</span></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="maven环境"><a href="#maven环境" class="headerlink" title="maven环境"></a>maven环境</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirror.bit.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz</span><br><span class="line"><span class="meta">#</span><span class="bash">建议先下好，然后传输到虚拟机</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tar -zxvf apache-maven-3.6.3-bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">换个地方，按自己喜欢来</span></span><br><span class="line">mv apache-maven-3.6.3 /opt/wyz/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">修改配置文件，换成aliyun的镜像</span></span><br><span class="line">cd apache-maven-3.6.3/conf/</span><br><span class="line"></span><br><span class="line">vi settings.xml</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">找到mirrors节点，在里面加入</span></span><br><span class="line">&lt;mirror&gt;</span><br><span class="line">		&lt;!--This sends everything else to /public --&gt;</span><br><span class="line">		&lt;id&gt;nexus-aliyun&lt;/id&gt;</span><br><span class="line">		&lt;mirrorOf&gt;*&lt;/mirrorOf&gt;</span><br><span class="line">		&lt;name&gt;Nexus aliyun&lt;/name&gt;</span><br><span class="line">		&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</span><br><span class="line">	&lt;/mirror&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">去修改环境变量</span></span><br><span class="line">vi /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加环境变量</span></span><br><span class="line">export PATH=$PATH:/opt/wyz/apache-maven-3.6.3/bin</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line">source /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash">检查</span></span><br><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="RocketMQ安装"><a href="#RocketMQ安装" class="headerlink" title="RocketMQ安装"></a>RocketMQ安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">建议先下好</span></span><br><span class="line">wget https://github.com/apache/rocketmq/archive/master.zip</span><br><span class="line"><span class="meta">#</span><span class="bash">下面是MQ扩展包，以后会用到</span></span><br><span class="line">wget https://github.com/apache/rocketmq-externals/archive/master.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yum install unzip -y</span><br><span class="line">unzip rocketmq-master.zip </span><br><span class="line">cd rocketmq-master</span><br><span class="line"><span class="meta">#</span><span class="bash">ls查看目录会发现他是一个聚合项目，maven编译父工程就行</span></span><br><span class="line">mvn -Prelease-all -DskipTests clean install -U</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时的target会出现在distribute目录下</span></span><br><span class="line">cd distribution/</span><br><span class="line">cd target/rocketmq-4.7.1-SNAPSHOT</span><br><span class="line">mv rocketmq-4.7.1-SNAPSHOT/ /opt/wyz/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时大体的安装流程走完了</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/wyz/rocketmq-4.7.1-SNAPSHOT/</span><br><span class="line">cd bin/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">先启动mqnamesrv  相当于一个注册中心，先启动</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动会调起runserver.sh </span></span><br><span class="line">./mqnamesrv</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时没有配置后台运行，会卡住，新开一个虚拟机连接</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动mqbroker  服务器，做消息业务的</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动会调起runbroker.sh</span></span><br><span class="line">cd /opt/wyz/rocketmq-4.7.1-SNAPSHOT/bin/</span><br><span class="line">./mqbroker</span><br><span class="line"><span class="meta">#</span><span class="bash">此时会报错，不能分配内存,看看runbroker.sh</span></span><br><span class="line">vi runbroker.sh</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">可以看到jvm的一些参数,</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xms8g表示分配最小内存为8g</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xmx8g表示分配最大内存为8g</span></span><br><span class="line"><span class="meta">#</span><span class="bash">这两个参数相等是为了不要动态扩容，扩容需要耗时</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xmn4g 设置年轻代分配4g内存</span></span><br><span class="line">JAVA_OPT="$&#123;JAVA_OPT&#125; -server -Xms8g -Xmx8g -Xmn4g"</span><br><span class="line"><span class="meta">#</span><span class="bash">改成</span></span><br><span class="line"><span class="meta">#</span><span class="bash">我虚拟机没有分配这么大内存，所以改小</span></span><br><span class="line">JAVA_OPT="$&#123;JAVA_OPT&#125; -server -Xms512m -Xmx512m -Xmn128m"</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时启动</span></span><br><span class="line">./mqbroker </span><br><span class="line"><span class="meta">#</span><span class="bash">./mqbroker -n localhost:9876 指定连接哪个mqnamesrv</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">会报错，意思是无法获取主机名，但是不影响运行</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> BaseNode: BaseNode: Name or service not known</span></span><br><span class="line"><span class="meta">#</span><span class="bash">BaseNode是我当前虚拟机的名字</span></span><br><span class="line"><span class="meta">#</span><span class="bash">但是hosts里面没有配置这个名字的ip地址</span></span><br><span class="line">ping BaseNode#是ping不通的</span><br><span class="line"></span><br><span class="line">vi /etc/hosts</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加</span></span><br><span class="line">192.168.47.100 BaseNode</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时启动，不会报错</span></span><br><span class="line">./mqbroker</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">新开一个虚拟机连接</span></span><br><span class="line"></span><br><span class="line">cd /opt/wyz/rocketmq-4.7.1-SNAPSHOT/bin/</span><br><span class="line"></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"><span class="meta">#</span><span class="bash">此时会抛出远程连接失败的异常</span></span><br><span class="line"></span><br><span class="line">vi tools.sh </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加一个注册中心的环境变量，位置不要放错，里面有<span class="built_in">export</span>的位置的</span></span><br><span class="line">export NAMESRV_ADDR=localhost:9876</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时还是报错，</span></span><br><span class="line"><span class="meta">#</span><span class="bash">MQClientException: No route info of this topic: TopicTest</span></span><br><span class="line"><span class="meta">#</span><span class="bash">没有客户端的路由信息，把mqnamesrv当成注册中心，其他的服务就相当于客户端，这里的意思就是broker没有把服务注册到注册中心</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">重新启动mqbroker</span></span><br><span class="line">./mqbroker -n localhost:9876 </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">这一次执行，正常来说就没有错误了</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">这一句话的意思是 把测试的消息放入mq</span></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"><span class="meta">#</span><span class="bash">这一句话的意思是 把mq里面的消息进行消费</span></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Consumer</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">到这里就测试成功</span></span><br></pre></td></tr></table></figure>
+
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          忘忧症
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://NepenthesZGW.github.io/2020/06/16/framework/RocketMQ/RocketMQ搭建/" title="RocketMQ搭建" target="_blank">https://NepenthesZGW.github.io/2020/06/16/framework/RocketMQ/RocketMQ搭建/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/NepenthesZGW/NepenthesZGW.github.io/blob/master/LICENSE.TXT" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -250,16 +345,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://nepentheszgw.github.io/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/12/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git介绍和使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -280,641 +435,14 @@
 
 
 
-  
-    <article id="post-项目管理/git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/12/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/git/" target="_blank">git介绍和使用</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2020/06/12/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/git/" class="archive-article-date">
-        <time datetime="2020-06-12T02:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-12</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>git现在是公司必备，一定要会的东西</p>
-<h3 id="Git概念"><a href="#Git概念" class="headerlink" title="Git概念"></a>Git概念</h3><p>Git是一个免费的，开源的<strong>分布式版本控制</strong>系统，可以快速高效处理小型到大型的项目</p>
-<h3 id="git历史"><a href="#git历史" class="headerlink" title="git历史"></a>git历史</h3><p>截取百度百科</p>
-<p> 林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds, 1969年~ ），著名的电脑程序员。<a href="https://baike.baidu.com/item/Linux" target="_blank" rel="noopener">Linux</a>内核的发明人及该计划的合作者 [1] 。托瓦兹利用个人时间及器材创造出了这套当今全球最流行的操作系统（作业系统）内核之一。现受聘于<a href="https://baike.baidu.com/item/开放源代码/114160" target="_blank" rel="noopener">开放源代码</a>开发实验室（OSDL：Open Source Development Labs, Inc），全力开发<a href="https://baike.baidu.com/item/Linux/27050" target="_blank" rel="noopener">Linux</a>内核。 </p>
-<p>21岁把开源的linux系统创造出来，因为这个天才支持开源，想让跟多的程序源投入，于是linux会进行多人开发和修订，那么就需要版本控制，起初是和BitKeeper合作，因为linux开发人员想方设法利用反编译等工具看源码，而BitKeeper不想开源，从而终止合作</p>
-<p>那么天才程序员Linus Benedict Torvalds在一个月就把git的主体功能全部开发完成</p>
-    
-    <a class="article-more-a" href="/2020/06/12/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/git/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/12/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/git/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-database/面试题/市面上数据库的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/11/database/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B8%82%E9%9D%A2%E4%B8%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_blank">三种主流数据库的区别</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/11/database/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B8%82%E9%9D%A2%E4%B8%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-        <time datetime="2020-06-11T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p> 转自</p>
-<p><a href="https://blog.csdn.net/wuliuwei1234/article/details/76504718/" target="_blank" rel="noopener">https://blog.csdn.net/wuliuwei1234/article/details/76504718/</a> </p>
-    
-    <a class="article-more-a" href="/2020/06/11/database/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B8%82%E9%9D%A2%E4%B8%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/11/database/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B8%82%E9%9D%A2%E4%B8%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java/面试题/java面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/11/java/%E9%9D%A2%E8%AF%95%E9%A2%98/java%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank">java面试题</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/11/java/%E9%9D%A2%E8%AF%95%E9%A2%98/java%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-        <time datetime="2020-06-11T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>我遇到的Java面试题,凡是我没做出来的，或者不清晰都会往这里不停的更新</p>
-    
-    <a class="article-more-a" href="/2020/06/11/java/%E9%9D%A2%E8%AF%95%E9%A2%98/java%E9%9D%A2%E8%AF%95%E9%A2%98/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/11/java/%E9%9D%A2%E8%AF%95%E9%A2%98/java%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-database/面试题/sql行转列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/" target="_blank">sql行转列面试题</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/" class="archive-article-date">
-        <time datetime="2020-06-10T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我今天面试遇到sql的面试题，基本都要行转列，行转列子查询也可以实现，但是写起来实在太麻烦，我因为没有掌握case when语法，今天的大部分行转列都没有做出来，于是我决定学习一下这个语法</p>
-    
-    <a class="article-more-a" href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java/动态绑定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" target="_blank">动态绑定</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" class="archive-article-date">
-        <time datetime="2020-06-10T03:42:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="Java静态绑定"><a href="#Java静态绑定" class="headerlink" title="Java静态绑定"></a>Java静态绑定</h3><pre><code>在程序执行以前已经绑定（即在编译过程中就知道这个方法到底是哪个类中的方法）。 
-
-Java中的方法只有final、static、private修饰的的方法和构造方法是静态绑定的。</code></pre>
-    
-    <a class="article-more-a" href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java/oop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/10/java/oop/" target="_blank">面向对象</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/10/java/oop/" class="archive-article-date">
-        <time datetime="2020-06-10T02:42:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="什么是面向对象"><a href="#什么是面向对象" class="headerlink" title="什么是面向对象"></a>什么是面向对象</h1><p>名词: 行为=方法</p>
-<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>类是对现实生活中一类具有共同特征的抽象，例如人类，狗类</p>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象就是一个具体的东西，它实实在在，例如人类是一个抽象，那么小张就是人类的具体的某一个对象</p>
-    
-    <a class="article-more-a" href="/2020/06/10/java/oop/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/10/java/oop/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java/Java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/09/java/Java/" target="_blank">java</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/09/java/Java/" class="archive-article-date">
-        <time datetime="2020-06-09T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA基础</h1><ul>
-<li><a href="/2020/06/10/java/oop">面向对象</a></li>
-<li><a href="/2020/06/10/java/动态绑定">动态绑定</a></li>
-<li>多态</li>
-<li>容器</li>
-<li>IO</li>
-<li>线程池</li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/09/java/Java/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/09/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" target="_blank">博客搭建</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/09/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-        <time datetime="2020-06-09T02:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><p> <a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html" target="_blank" rel="noopener">https://www.cnblogs.com/xueweisuoyong/p/11914045.html</a> </p>
-<h3 id="node"><a href="#node" class="headerlink" title="node"></a>node</h3><p>安装教程网址</p>
-<p> <a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a> </p>
-    
-    <a class="article-more-a" href="/2020/06/09/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/09/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -954,8 +482,8 @@ Java中的方法只有final、static、private修饰的的方法和构造方法�
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
