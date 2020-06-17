@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://NepenthesZGW.github.io">
-  <title>RocketMQ搭建 | 忘忧症的博客</title>
+  <title>RocketMQ配置web控制台 | 忘忧症的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="消息中间件中间件这个词一听就是 处于 多个系统中间一个软件，那么它的存在必然有它的好处，也必然要与其他的系统进行关联，如果没有其他其他系统，那么就没有中间件存在的意义。 常见的中间件有 文件存储中间件，缓存中间件，搜索中间件，消息中间件等等，还有其他的 那么消息中间件少不了消息队列 消息队列 消息队列是《数据结构》中先进先出的一种数据结构">
+  <meta name="description" content="RocketMQ配置web控制台下载RocketMQ扩展的发布版本  https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;rocketmq-externals&#x2F;releases">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RocketMQ搭建">
-<meta property="og:url" content="https://nepentheszgw.github.io/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="RocketMQ配置web控制台">
+<meta property="og:url" content="https://nepentheszgw.github.io/2020/06/16/framework/RocketMQ/RocketMQ/index.html">
 <meta property="og:site_name" content="忘忧症的博客">
-<meta property="og:description" content="消息中间件中间件这个词一听就是 处于 多个系统中间一个软件，那么它的存在必然有它的好处，也必然要与其他的系统进行关联，如果没有其他其他系统，那么就没有中间件存在的意义。 常见的中间件有 文件存储中间件，缓存中间件，搜索中间件，消息中间件等等，还有其他的 那么消息中间件少不了消息队列 消息队列 消息队列是《数据结构》中先进先出的一种数据结构">
+<meta property="og:description" content="RocketMQ配置web控制台下载RocketMQ扩展的发布版本  https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;rocketmq-externals&#x2F;releases">
 <meta property="og:locale" content="zh">
-<meta property="article:published_time" content="2020-06-16T02:28:52.000Z">
-<meta property="article:modified_time" content="2020-06-17T02:42:25.275Z">
+<meta property="article:published_time" content="2020-06-16T03:28:52.000Z">
+<meta property="article:modified_time" content="2020-06-17T02:43:14.190Z">
 <meta property="article:author" content="忘忧症">
 <meta name="twitter:card" content="summary">
   
@@ -199,14 +199,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-framework/RocketMQ/RocketMQ搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-framework/RocketMQ/RocketMQ" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      RocketMQ搭建
+      RocketMQ配置web控制台
     </h1>
   
 
@@ -218,8 +218,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-        <time datetime="2020-06-16T02:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-16</time>
+<a href="/2020/06/16/framework/RocketMQ/RocketMQ/" class="archive-article-date">
+        <time datetime="2020-06-16T03:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-16</time>
 </a>
 
   
@@ -232,7 +232,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">2.2k字</span>
+      <span class="post-count">174字</span>
     </span>
   </span>
 
@@ -241,7 +241,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">8分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -252,80 +252,25 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="消息中间件"><a href="#消息中间件" class="headerlink" title="消息中间件"></a>消息中间件</h3><p>中间件这个词一听就是 处于 多个系统中间一个软件，那么它的存在必然有它的好处，也必然要与其他的系统进行关联，如果没有其他其他系统，那么就没有中间件存在的意义。</p>
-<p>常见的中间件有 文件存储中间件，缓存中间件，搜索中间件，消息中间件等等，还有其他的</p>
-<p>那么消息中间件少不了消息队列</p>
-<h5 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h5><p> 消息队列是《数据结构》中先进先出的一种数据结构</p>
+    <h3 id="RocketMQ配置web控制台"><a href="#RocketMQ配置web控制台" class="headerlink" title="RocketMQ配置web控制台"></a>RocketMQ配置web控制台</h3><p>下载RocketMQ扩展的发布版本</p>
+<p> <a href="https://github.com/apache/rocketmq-externals/releases" target="_blank" rel="noopener">https://github.com/apache/rocketmq-externals/releases</a> </p>
 <a id="more"></a>
 
-<h3 id="消息中间件功能"><a href="#消息中间件功能" class="headerlink" title="消息中间件功能"></a>消息中间件功能</h3><h4 id="应用系统解耦"><a href="#应用系统解耦" class="headerlink" title="应用系统解耦"></a>应用系统解耦</h4><p>多个应用系统之间不再互相依赖，都跟中间件通讯，只要中间件保证了可用和一致，那么多个应用系统就可以降低可用性</p>
-<p>以前A应用需要通过http请求或者RMI <strong>同步调用</strong>方式来获取B应用的结果，是一个强依赖关系，因为B挂了，A所有需要B来支撑的服务接口也就相当于什么都干不了，此时就需要对B做高可用，分布式情况下，一个系统像B这样的服务有很多，每一个系统做高可用浪费资源</p>
-<p>消息中间件做高可用</p>
-<p>那么A应用的服务 想干什么事变成一个消息 放到消息队列</p>
-<p> 而B应用 订阅消息来进行处理消费</p>
-<p>A和B解开了强依赖的关系</p>
-<p>此时A应用调用B的服务相当于写了一个消息放入容器，而这个容器是高可用的，那么就相当于异步调用，因为是异步，所以事务这一块无法保证</p>
-<h4 id="流量削峰"><a href="#流量削峰" class="headerlink" title="流量削峰"></a>流量削峰</h4><p>对于流量很大的系统，往往需要做限流操作，避免系统被大流量击垮，但是限流操作意味着有一部分请求不能立马得到处理，相当于损失了请求，而往往有一些请求很重要不能丢失</p>
-<p>这个时候可以使用消息中间件来存入大量的请求，（就可以降低限流的大小，来保证可用），匀速消费，当消息队列中堆积消息过多时，也可以动态上线增加消费服务系统，来保证不丢失重要请求。</p>
-<h4 id="大数据处理"><a href="#大数据处理" class="headerlink" title="大数据处理"></a>大数据处理</h4><p>消息中间件可以把各个模块中产生的管理员操作日志、用户行为、系统状态等数据文件作为消息收集到主题中</p>
-<p>数据使用方可以订阅自己感兴趣的数据内容互不影响，进行消费</p>
-<h4 id="异构系统"><a href="#异构系统" class="headerlink" title="异构系统"></a>异构系统</h4><p>可以把多个系统进行关联</p>
-<h3 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h3><p>RocketMQ是基于（kafka）MetaQ的内核，对其进行了优化让其更满足互联网公司的特点。</p>
-<p>纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。</p>
-<p> RocketMQ目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。 </p>
-<h5 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h5><p>首先rocketMQ不遵循JMS的标准</p>
-<h6 id="Name-Server"><a href="#Name-Server" class="headerlink" title="Name Server"></a>Name Server</h6><p>底层由netty实现，提供了路由管理、服务注册、服务发现的功能，是一个无状态节点</p>
-<p><strong>服务发现者</strong>，集群中各个角色（producer、broker、consumer等）都需要定时想nameserver上报自己的状态，以便互相发现彼此，超时不上报的话，nameserver会把它从列表中剔除</p>
-<p><strong>部署多个</strong>，当多个nameserver存在的时候，其他角色同时向他们上报信息，以保证高可用，</p>
-<p><strong>集群间互不通信</strong>，没有主备的概念</p>
-<p><strong>内存式存储</strong>，nameserver中的broker、topic等信息默认不会持久化</p>
-<h6 id="Broker"><a href="#Broker" class="headerlink" title="Broker"></a>Broker</h6><ul>
-<li><p>Broker面向producer和consumer接受和发送消息</p>
-</li>
-<li><p>向nameserver提交自己的信息</p>
-</li>
-<li><p>是消息中间件的消息存储、转发服务器。</p>
-</li>
-<li><p>每个Broker节点，在启动时，都会遍历NameServer列表，与每个NameServer建立长连接，注册自己的信息，之后定时上报。</p>
-</li>
-<li><p>Broker集群高可用，可以配成Master/Slave结构，Master可写可读，Slave只可以读，Master将写入的数据同步给Slave。Master与Slave的对应关系通过指定相同的BrokerName，不同的BrokerId来定义BrokerId为0表示Master，非0表示Slave</p>
-</li>
+<p>配置web控制台只需要  rocketmq-console项目，下载对应的发布版本就好</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">j解压</span></span><br><span class="line">unzip rocketmq-externals-rocketmq-console-1.0.0.zip </span><br><span class="line"></span><br><span class="line">cd rocketmq-externals-rocketmq-console-1.0.0/</span><br><span class="line">cd rocketmq-console/</span><br><span class="line"><span class="meta">#</span><span class="bash">maven编译</span></span><br><span class="line">mvn clean package -Dmaven.test.skip=true</span><br><span class="line">cd target/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">移动jar包</span></span><br><span class="line">mv rocketmq-console-ng-1.0.0.jar /opt/wyz/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">启动</span></span><br><span class="line">java -jar rocketmq-console-ng-1.0.0.jar</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">启动会有端口信息</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>访问 http://虚拟机ip:端口/</p>
+<p>顶部导航栏有ChangeLanguage,切换为中文页面</p>
+<h5 id="配置mqnamesrv"><a href="#配置mqnamesrv" class="headerlink" title="配置mqnamesrv"></a>配置mqnamesrv</h5><ul>
+<li>点击顶部导航栏OPS</li>
+<li>输入mqnamesrv的ip加端口 </li>
+<li>重点操作，输入完之后需要回车</li>
+<li>然后点击update按钮</li>
 </ul>
-<h6 id="producer"><a href="#producer" class="headerlink" title="producer"></a>producer</h6><ul>
-<li>消息的生产者</li>
-<li>通过nameserver集群中的其中一个节点（随机选择）建立长连接，获得Topic的路由信息，包括Topic下面有哪些Queue，这些Queue分布在哪些Broker上等</li>
-<li>接下来向提供Topic服务的Master建立长连接，且定时向Master发送心跳</li>
-</ul>
-<h6 id="consumer"><a href="#consumer" class="headerlink" title="consumer"></a>consumer</h6><p>消息的消费者，通过NameServer集群获得Topic的路由信息，连接到对应的Broker上消费消息。</p>
-<p>注意，由于Master和Slave都可以读取消息，因此Consumer与Master和Slave可以建立连接。</p>
-<h5 id="消息存储形式"><a href="#消息存储形式" class="headerlink" title="消息存储形式"></a>消息存储形式</h5><p>Message是在每个Broker上以Queue的形式记录。 </p>
-<p>Topic是一个逻辑概念</p>
-<p>一个Topic可以包含多个queue</p>
-<p>多个queue可以分布在不同的broker</p>
-<p>而每一个queue都能记录对应消息</p>
-<p>广播形式需要客户端设置消费的属性</p>
-<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="http://rocketmq.apache.org/" target="_blank" rel="noopener">http://rocketmq.apache.org</a></p>
-<p><strong>GitHub</strong></p>
-<p><a href="https://github.com/apache/rocketmq" target="_blank" rel="noopener">https://github.com/apache/rocketmq</a></p>
-<h3 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h3><p>CentOS7   Xshell   Xftp 6</p>
-<h5 id="Java-JDK环境"><a href="#Java-JDK环境" class="headerlink" title="Java JDK环境"></a>Java JDK环境</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install wget -y</span><br><span class="line">wget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.rpm</span><br><span class="line"><span class="meta">#</span><span class="bash">地址可能会变，小伙伴注意一下</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rpm -ivh jdk-8u181-linux-x64.rpm</span><br><span class="line"></span><br><span class="line">vi /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line">export JAVA_HOME=/usr/java/default</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">检测</span></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="maven环境"><a href="#maven环境" class="headerlink" title="maven环境"></a>maven环境</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirror.bit.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz</span><br><span class="line"><span class="meta">#</span><span class="bash">建议先下好，然后传输到虚拟机</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tar -zxvf apache-maven-3.6.3-bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">换个地方，按自己喜欢来</span></span><br><span class="line">mv apache-maven-3.6.3 /opt/wyz/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">修改配置文件，换成aliyun的镜像</span></span><br><span class="line">cd apache-maven-3.6.3/conf/</span><br><span class="line"></span><br><span class="line">vi settings.xml</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">找到mirrors节点，在里面加入</span></span><br><span class="line">&lt;mirror&gt;</span><br><span class="line">		&lt;!--This sends everything else to /public --&gt;</span><br><span class="line">		&lt;id&gt;nexus-aliyun&lt;/id&gt;</span><br><span class="line">		&lt;mirrorOf&gt;*&lt;/mirrorOf&gt;</span><br><span class="line">		&lt;name&gt;Nexus aliyun&lt;/name&gt;</span><br><span class="line">		&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</span><br><span class="line">	&lt;/mirror&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">去修改环境变量</span></span><br><span class="line">vi /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加环境变量</span></span><br><span class="line">export PATH=$PATH:/opt/wyz/apache-maven-3.6.3/bin</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line">source /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash">检查</span></span><br><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="RocketMQ安装"><a href="#RocketMQ安装" class="headerlink" title="RocketMQ安装"></a>RocketMQ安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">建议先下好</span></span><br><span class="line">wget https://github.com/apache/rocketmq/archive/master.zip</span><br><span class="line"><span class="meta">#</span><span class="bash">下面是MQ扩展包，以后会用到</span></span><br><span class="line">wget https://github.com/apache/rocketmq-externals/archive/master.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yum install unzip -y</span><br><span class="line">unzip rocketmq-master.zip </span><br><span class="line">cd rocketmq-master</span><br><span class="line"><span class="meta">#</span><span class="bash">ls查看目录会发现他是一个聚合项目，maven编译父工程就行</span></span><br><span class="line">mvn -Prelease-all -DskipTests clean install -U</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时的target会出现在distribute目录下</span></span><br><span class="line">cd distribution/</span><br><span class="line">cd target/rocketmq-4.7.1-SNAPSHOT</span><br><span class="line">mv rocketmq-4.7.1-SNAPSHOT/ /opt/wyz/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时大体的安装流程走完了</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/wyz/rocketmq-4.7.1-SNAPSHOT/</span><br><span class="line">cd bin/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">先启动mqnamesrv  相当于一个注册中心，先启动</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动会调起runserver.sh </span></span><br><span class="line">./mqnamesrv</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时没有配置后台运行，会卡住，新开一个虚拟机连接</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动mqbroker  服务器，做消息业务的</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动会调起runbroker.sh</span></span><br><span class="line">cd /opt/wyz/rocketmq-4.7.1-SNAPSHOT/bin/</span><br><span class="line">./mqbroker</span><br><span class="line"><span class="meta">#</span><span class="bash">此时会报错，不能分配内存,看看runbroker.sh</span></span><br><span class="line">vi runbroker.sh</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">可以看到jvm的一些参数,</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xms8g表示分配最小内存为8g</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xmx8g表示分配最大内存为8g</span></span><br><span class="line"><span class="meta">#</span><span class="bash">这两个参数相等是为了不要动态扩容，扩容需要耗时</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xmn4g 设置年轻代分配4g内存</span></span><br><span class="line">JAVA_OPT="$&#123;JAVA_OPT&#125; -server -Xms8g -Xmx8g -Xmn4g"</span><br><span class="line"><span class="meta">#</span><span class="bash">改成</span></span><br><span class="line"><span class="meta">#</span><span class="bash">我虚拟机没有分配这么大内存，所以改小</span></span><br><span class="line">JAVA_OPT="$&#123;JAVA_OPT&#125; -server -Xms512m -Xmx512m -Xmn128m"</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时启动</span></span><br><span class="line">./mqbroker </span><br><span class="line"><span class="meta">#</span><span class="bash">./mqbroker -n localhost:9876 指定连接哪个mqnamesrv</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">会报错，意思是无法获取主机名，但是不影响运行</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> BaseNode: BaseNode: Name or service not known</span></span><br><span class="line"><span class="meta">#</span><span class="bash">BaseNode是我当前虚拟机的名字</span></span><br><span class="line"><span class="meta">#</span><span class="bash">但是hosts里面没有配置这个名字的ip地址</span></span><br><span class="line">ping BaseNode#是ping不通的</span><br><span class="line"></span><br><span class="line">vi /etc/hosts</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加</span></span><br><span class="line">192.168.47.100 BaseNode</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时启动，不会报错</span></span><br><span class="line">./mqbroker</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">新开一个虚拟机连接</span></span><br><span class="line"></span><br><span class="line">cd /opt/wyz/rocketmq-4.7.1-SNAPSHOT/bin/</span><br><span class="line"></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"><span class="meta">#</span><span class="bash">此时会抛出远程连接失败的异常</span></span><br><span class="line"></span><br><span class="line">vi tools.sh </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加一个注册中心的环境变量，位置不要放错，里面有<span class="built_in">export</span>的位置的</span></span><br><span class="line">export NAMESRV_ADDR=localhost:9876</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">###</span></span></span><br><span class="line"></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">此时还是报错，</span></span><br><span class="line"><span class="meta">#</span><span class="bash">MQClientException: No route info of this topic: TopicTest</span></span><br><span class="line"><span class="meta">#</span><span class="bash">没有客户端的路由信息，把mqnamesrv当成注册中心，其他的服务就相当于客户端，这里的意思就是broker没有把服务注册到注册中心</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">重新启动mqbroker</span></span><br><span class="line">./mqbroker -n localhost:9876 </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">这一次执行，正常来说就没有错误了</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">这一句话的意思是 把测试的消息放入mq</span></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"><span class="meta">#</span><span class="bash">这一句话的意思是 把mq里面的消息进行消费</span></span><br><span class="line">./tools.sh org.apache.rocketmq.example.quickstart.Consumer</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">到这里就测试成功</span></span><br></pre></td></tr></table></figure>
-
 
     
 
@@ -372,7 +317,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://NepenthesZGW.github.io/2020/06/16/framework/RocketMQ/RocketMQ搭建/" title="RocketMQ搭建" target="_blank">https://NepenthesZGW.github.io/2020/06/16/framework/RocketMQ/RocketMQ搭建/</a>
+          <a href="https://NepenthesZGW.github.io/2020/06/16/framework/RocketMQ/RocketMQ/" title="RocketMQ配置web控制台" target="_blank">https://NepenthesZGW.github.io/2020/06/16/framework/RocketMQ/RocketMQ/</a>
         </li>
         
         <li>
@@ -439,7 +384,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://nepentheszgw.github.io/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://nepentheszgw.github.io/2020/06/16/framework/RocketMQ/RocketMQ/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -454,18 +399,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/06/16/framework/RocketMQ/RocketMQ/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RocketMQ配置web控制台
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/06/12/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git介绍和使用</div>
+    <a href="/2020/06/16/framework/RocketMQ/RocketMQ%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">RocketMQ搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
