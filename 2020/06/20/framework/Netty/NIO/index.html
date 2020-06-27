@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://NepenthesZGW.github.io">
-  <title>Archives: 2020 | 忘忧症的博客</title>
+  <title>NIO | 忘忧症的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="忘忧症的博客">
-<meta property="og:url" content="https://nepentheszgw.github.io/archives/2020/page/2/index.html">
+  <meta name="description" content="同步,异步,阻塞,非阻塞同步和阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行， 异步和非阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行  同步阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行，调用a1的线程不能动，必须等到a1执行完（调用线程就是a1的执行线程） 同步非阻塞：完成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NIO">
+<meta property="og:url" content="https://nepentheszgw.github.io/2020/06/20/framework/Netty/NIO/index.html">
 <meta property="og:site_name" content="忘忧症的博客">
+<meta property="og:description" content="同步,异步,阻塞,非阻塞同步和阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行， 异步和非阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行  同步阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行，调用a1的线程不能动，必须等到a1执行完（调用线程就是a1的执行线程） 同步非阻塞：完成">
 <meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-06-20T02:28:52.000Z">
+<meta property="article:modified_time" content="2020-06-22T14:19:14.620Z">
 <meta property="article:author" content="忘忧症">
 <meta name="twitter:card" content="summary">
   
@@ -195,218 +199,265 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-framework/Netty/NIO" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/11/java/%E9%9D%A2%E8%AF%95%E9%A2%98/java%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-        <time datetime="2020-06-11T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-11</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/11/java/%E9%9D%A2%E8%AF%95%E9%A2%98/java%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank">java面试题</a>
   
+    <h1 class="article-title" itemprop="name">
+      NIO
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/" class="archive-article-date">
-        <time datetime="2020-06-10T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/06/20/framework/Netty/NIO/" class="archive-article-date">
+        <time datetime="2020-06-20T02:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-20</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.9k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">11分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="同步-异步-阻塞-非阻塞"><a href="#同步-异步-阻塞-非阻塞" class="headerlink" title="同步,异步,阻塞,非阻塞"></a>同步,异步,阻塞,非阻塞</h1><h3 id="同步和阻塞："><a href="#同步和阻塞：" class="headerlink" title="同步和阻塞："></a>同步和阻塞：</h3><p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行，</p>
+<h3 id="异步和非阻塞："><a href="#异步和非阻塞：" class="headerlink" title="异步和非阻塞："></a>异步和非阻塞：</h3><p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行 </p>
+<h3 id="同步阻塞："><a href="#同步阻塞：" class="headerlink" title="同步阻塞："></a>同步阻塞：</h3><p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行，<strong>调用</strong>a1的线程不能动，必须等到a1执行完（调用线程就是a1的执行线程）</p>
+<h3 id="同步非阻塞："><a href="#同步非阻塞：" class="headerlink" title="同步非阻塞："></a>同步非阻塞：</h3><p>完成一件事，需要干a1,a2,a3这些事，a1在执行的情况下，a2,a3不能执行，<strong>调用</strong>a1的线程是活动的，就是a1在执行时，可以调用a2或者a3，但是为了同步 他不能干其他事，只能轮询看a1有没有执行完（调用线程与a1的执行线程不一样）</p>
+<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>（个人认为）首先我认为异步没有阻塞和非阻塞</p>
+<p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行 ，就是一个线程调用a1，a2,a3时不会立马执行，但是会交给其他线程执行（a1,a2,a3的执行线程都可以是调用线程，也可以不是），自己可以设置钩子，来让执行a1,a2,a3的线程进行回调</p>
+<p>异步就是内部进行一下包装，a1,a2,a3的执行跟彼此无关的，不知道谁先执行，谁后执行，反正最后回调钩子函数</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>同步，异步都是逻辑上的概念，实现方式自己定</p>
+<p>阻塞和非阻塞就是具体的东西</p>
+<h1 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h1><p>NIO里面的FileChannel是同步的</p>
+<p>NIO 叫做NEW IO ，提出了新的概念，引入多路选择器Selector，Channel和Bytebuffer</p>
+<h2 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h2><h3 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h3><p>一个IO流的通道</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//具备一个IO操作能力，一旦closed，任何IO操作都会报异常</span></span><br><span class="line">Channel</span><br><span class="line">    </span><br><span class="line"><span class="comment">//具备IO读取的能力，一个线程使用可读的channel发起一个读操作，那么其他线程在想要发起读操作就只能阻塞直到第一个读操作完成</span></span><br><span class="line">ReadableByteChannel 实现  Channel</span><br><span class="line">    </span><br><span class="line"><span class="comment">//具备IO写的能力，同样多个线程发起IO写操作，得一个一个来</span></span><br><span class="line">WritableByteChannel 实现  Channel</span><br><span class="line"></span><br><span class="line"><span class="comment">//一个可以读写字节的channel</span></span><br><span class="line">ByteChannel 实现 ReadableByteChannel，WritableByteChannel</span><br><span class="line">    </span><br><span class="line"><span class="comment">//能够使ByteChannel保持当前position并且允许修改当前position得能力    </span></span><br><span class="line"><span class="comment">//通常一个文件类型得实体，    </span></span><br><span class="line">SeekableByteChannel 实现 ByteChannel </span><br><span class="line"></span><br><span class="line"><span class="comment">//可以在一个Buffer数组中读取字节</span></span><br><span class="line">ScatteringByteChannel 实现ReadableByteChannel    </span><br><span class="line"><span class="comment">// 可以在一个Buffer数组中把字节写出去   </span></span><br><span class="line">GatheringByteChannel 实现WritableByteChannel</span><br><span class="line">    </span><br><span class="line"><span class="comment">//有 异步关闭和 中断的能力的channel    </span></span><br><span class="line">InterruptibleChannel 实现channel    </span><br><span class="line"></span><br><span class="line">AbstractInterruptibleChannel 实现Channel，InterruptibleChannel</span><br><span class="line">    </span><br><span class="line"><span class="comment">//该channel 表示为网络的一个socket    </span></span><br><span class="line">NetworkChannel 实现 Channel    </span><br><span class="line">     bind(SocketAddress local);本机地址绑定到 该channel的socket</span><br><span class="line">     getLocalAddress()；返回此socket绑定的本机地址</span><br><span class="line">     setOption(SocketOption&lt;T&gt; name, T value)  设置Socket选项</span><br><span class="line">     getOption(SocketOption&lt;T&gt; name)，通过指定的SocketOption来获取值</span><br><span class="line">     supportedOptions();返沪所支持的socket选项</span><br><span class="line">    </span><br><span class="line"><span class="comment">//可以通过selector进行多路复用的channel    </span></span><br><span class="line">SelectableChannel 继承AbstractInterruptibleChannel，实现channel    </span><br><span class="line">    provider();返回一个创建按该channel的provider</span><br><span class="line">    validOps();返回该channel所支持的的操作集</span><br><span class="line">    isRegistered();该channel是否被注册到任意的一个seletor，初始的该channel是没有被注册的</span><br><span class="line">    keyFor(Selector sel)；返回channel在给定selector上的注册信息 SelectionKey</span><br><span class="line">    register(Selector sel, <span class="keyword">int</span> ops, Object att);在给定的选择器上注册该channel，如果几经注册过，将返回注册的key，key的感兴趣的操作事件将会被指定成传进去的ops</span><br><span class="line">    configureBlocking(<span class="keyword">boolean</span> block)；调整该channel是否是阻塞的</span><br><span class="line">    isBlocking();判断这个channel是否阻塞</span><br><span class="line">    blockingLock();返回一个锁对象 ，一般用在同步操作</span><br><span class="line">        </span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line"><span class="comment">//实现基本模板 是多路复用的一个基类        </span></span><br><span class="line">AbstractSelectableChannel 继承SelectableChannel   </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"><span class="comment">//一个面向流的监听socket，它具有多路复用的能力</span></span><br><span class="line">ServerSocketChannel 继承AbstractSelectableChannel，实现NetworkChannel</span><br><span class="line">    open() 使用工厂方法创建一个本类实例</span><br><span class="line">    validOps() 返回这个channel所支持的operations</span><br><span class="line">    bind(SocketAddress local, <span class="keyword">int</span> backlog)；绑定，并设置最大的监听数</span><br><span class="line">    socket();返回该channel的socket</span><br><span class="line">    accept() 使用该channel的socket接待一个连接</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">//可选择的渠道面向数据流连接的套接字    </span></span><br><span class="line">SocketChannel 继承AbstractSelectableChannel 实现了ByteChannel，ScatteringByteChannel，GatheringByteChannel，NetworkChannel</span><br><span class="line">     open() 使用工厂方法创建一个本类实例</span><br><span class="line">     open(SocketAddress remote);调用了open()创建一个的该类实例，并且连接远程机器，返回该实例</span><br><span class="line">     isConnected();</span><br><span class="line">	 socket();返回该channel的socket</span><br><span class="line">     validOps() 返回这个channel所支持的operations</span><br><span class="line">     shutdownInput() 关闭输入流</span><br><span class="line">     shutdownOutput() 关闭输出流</span><br><span class="line">     isConnectionPending(); 连接操作还在进行中，返回<span class="keyword">true</span></span><br><span class="line">     connect(SocketAddress remote)；连接远程机器</span><br><span class="line">     finishConnect()；如果连接完成 ，返回<span class="keyword">true</span>，没有就返回<span class="keyword">false</span></span><br><span class="line">     getRemoteAddress()；获取远程地址</span><br><span class="line">     getLocalAddress() ；获取本机地址   </span><br><span class="line">      </span><br><span class="line">     一堆read，write方法</span><br></pre></td></tr></table></figure>
+
+<h3 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">Buffer<span class="class">.<span class="keyword">class</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">原始类型 <span class="title">int</span> <span class="title">char</span> 等等</span></span><br><span class="line"><span class="class">特定原始类型的数据的容器。</span></span><br><span class="line"><span class="class"><span class="title">buffer</span>是特定原始类型的一个线性，有限 元素序列 </span></span><br><span class="line"><span class="class"><span class="title">buffer</span>的基本属性</span></span><br><span class="line"><span class="class">    <span class="title">capacity</span> ：容量，包含多少个元素，不会为负，也不会变化大小</span></span><br><span class="line"><span class="class">    <span class="title">limit</span>： 临界值，是不应该被读或者写的第一个元素的索引，不会超过<span class="title">capacity</span></span></span><br><span class="line"><span class="class">    <span class="title">position</span>：起始位置 ，下一个 将被读或者写的元素的索引，大小不会超过<span class="title">limit</span>（相当于是一个读写指针）</span></span><br><span class="line"><span class="class">    </span></span><br><span class="line"><span class="class">    0，1，2，3，4，5</span></span><br><span class="line"><span class="class">                <span class="title">capacity</span>为6</span></span><br><span class="line"><span class="class">    4，5不能读写，<span class="title">limit</span></span>=<span class="number">4</span> </span><br><span class="line">    刚开始读      position=<span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    其实数组就能满足它的buffer的所有特点</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">    mark &lt;= position &lt;= limit &lt;= capacity </span><br><span class="line">    api:</span><br><span class="line">		position();返回position </span><br><span class="line">		position(<span class="keyword">int</span> newPosition)；设置position</span><br><span class="line">    	limit()；返回limit</span><br><span class="line">        limit(<span class="keyword">int</span> newLimit)；设置  limit</span><br><span class="line">        mark()；把mark =position，记录当前读或者写一个位置，用mark记录</span><br><span class="line">        reset();把position设置成mark位置，如果mark没有标记过，那么会抛出异常 </span><br><span class="line">    	clear()；limit，mark，poition，都重新设置成初始状态，相当于清空</span><br><span class="line">        flip() ；limit设置成当前position位置，position设置<span class="number">0</span>，mark设置成-<span class="number">1</span>，大概的作用就是要把一个buffer用IO流写出去时，先调用一下flip(),告诉它只能把limit之前的字节写出去</span><br><span class="line">        rewind()；position设置<span class="number">0</span>，mark设置成-<span class="number">1</span>，大该作用是在用IO流写出去一个buf之后，需要把内容copy到一个数组里面，此时需要再copy(get(array)操作）之前先调用rewind()；</span><br><span class="line">        remaining();返回可读字节数</span><br><span class="line">        hasRemaining() ；是否还有可读的字节</span><br><span class="line">        isReadOnly();是不是只读的    </span><br><span class="line">        hasArray();这个array不是空的并且不是只读的，就返回<span class="keyword">true</span></span><br><span class="line">		array();  <span class="comment">//返回buf里面的数组，如果是空的或者是只读的，会抛出异常</span></span><br><span class="line">		arrayOffset();<span class="comment">//返回buf里面的数组的offset</span></span><br><span class="line">		isDirect();<span class="comment">//是不是直接内存buffer                                              </span></span><br><span class="line">		slice();<span class="comment">//返回当前一个 可读写区域的一个子buf，使用的内存都是原来的内存</span></span><br><span class="line">		duplicate();<span class="comment">//复制这个buf，但是使用的内存都一样</span></span><br><span class="line">                                                                                       </span><br><span class="line">ByteBuffer<span class="class">.<span class="keyword">class</span>  </span></span><br><span class="line"><span class="class">    两种<span class="title">ByteBuffer</span></span></span><br><span class="line">    Direct vs non-direct buffers :直接内存和非直接内存的比较</span><br><span class="line">       non-direct buffers </span><br><span class="line">             <span class="number">1</span>数据从硬件到  C或者C++写的内核 这里需要copy 到内存</span><br><span class="line">             <span class="number">2</span>内核到JVM虚拟机           这里需要copy 一份内存   </span><br><span class="line">             <span class="number">3</span>JVM虚拟机 到java进程堆内存 这里需要copy 一份内存    </span><br><span class="line">       Direct</span><br><span class="line">             <span class="number">1</span>数据从硬件到  C或者C++写的内核 这里需要copy 到内存</span><br><span class="line">        	 <span class="number">2</span>内核到JVM虚拟机           这里需要copy 一份内存</span><br><span class="line">			 直接内存在垃圾回收堆之外，意思就是GC不会管理该内存，所以建议Direct的ByteBuffer将主要分配给受底层系统本机I/O操作影响的大型、长寿命缓冲区。一般来说，只有当直接缓冲区在程序性能上产生可测量的增益时，才最好分配直接缓冲区。</span><br><span class="line">		</span><br><span class="line">       api：</span><br><span class="line">     	allocateDirect(<span class="keyword">int</span> capacity)；分配直接内存buffer	</span><br><span class="line">        allocate(<span class="keyword">int</span> capacity)分配一个非直接内存buffer	</span><br><span class="line">		wrap(<span class="keyword">byte</span>[] array,<span class="keyword">int</span> offset, <span class="keyword">int</span> length)；把一个数组转成非直接内存的buffer	</span><br><span class="line">        wrap(<span class="keyword">byte</span>[] array)把一个数组转成非直接内存的buffer</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//Singleton get/put methods</span></span><br><span class="line">        get(); 获取一个字节      获取数组下标为position的位置的字节 然后position++</span><br><span class="line">		put(<span class="keyword">byte</span> b); 放进去一个  把b放到数组下标为position的位置  然后position++</span><br><span class="line">        <span class="comment">//下面api自己都可以猜出来</span></span><br><span class="line">		get(<span class="keyword">int</span> index);</span><br><span class="line">		put(<span class="keyword">int</span> index, <span class="keyword">byte</span> b);</span><br><span class="line">		<span class="comment">//Bulk get operations </span></span><br><span class="line">		get(<span class="keyword">byte</span>[] dst)</span><br><span class="line">		get(<span class="keyword">byte</span>[] dst, <span class="keyword">int</span> offset, <span class="keyword">int</span> length) </span><br><span class="line">        put(ByteBuffer src)</span><br><span class="line">        put(<span class="keyword">byte</span>[] src, <span class="keyword">int</span> offset, <span class="keyword">int</span> length)</span><br><span class="line">        put(<span class="keyword">byte</span>[] src)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="selector"><a href="#selector" class="headerlink" title="selector"></a>selector</h3><p>一个多路复用器，一个具备多路复用能力的Channel在该selector上的注册信息就是一个SelectionKey对象，selector具有三组 selection keys</p>
+<p> key 集合  在该selector注册channel都会被拿出来，keys()可以获取</p>
+<p>selected-key集合，key的子集，key集合的任意一个key的channel被检测到有  operations（key感兴趣的ops，就是在注册时需要指定的ops）确认信息，就会被放到selected-key集合，selectedKeys() 可以获取，通过获取该集合的迭代器 调用remove方法可以从selected-key集合直接移除当前遍历到的key</p>
+<p>cancelled-key集合，key的子集，key集合的任意一个key被cancelled或者key的channel被close了，但是key的channel还没有被注销调，都被被放到selected-key集合，该集合不能直接被访问，这里面的key将不会参与下次 selection operations，并且移除keys集合对应再cancelled-key集合的key</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">open()；工厂方法，创建一个该类的实例，并打开selector</span><br><span class="line">close()</span><br><span class="line">isOpen();</span><br><span class="line">provider();返回一个提供selector的一个工厂</span><br><span class="line">keys(); 返回所有注册完成和等待被移除的key</span><br><span class="line">selectedKeys(); 等待被操作 的key</span><br><span class="line">wakeup();可以使选择操作立即返回。如果当前没有选择操作再执行，那么下一次选择操作会立即返回    </span><br><span class="line">selectNow()；遍历出每一个有IO操作的事情的key，这个方法不阻塞，如果没有一个key有IO操作，那么返回<span class="number">0</span>，之前任何的wakeup动作将会被消除不在生效，代操作的key放到了publicSelectedKeys里面    </span><br><span class="line">    </span><br><span class="line">select()；跟 selectNow()一样，只是它会阻塞，直到至少有一个channel有IO操作被选上，或者selector#wakeup方法被调用，或者调用线程被中断，才会结束阻塞  </span><br><span class="line">    </span><br><span class="line">select(<span class="keyword">long</span> timeout)  ；再 select()基础上加了一个超时返回    </span><br><span class="line"> </span><br><span class="line">selectNow(Consumer&lt;SelectionKey&gt; action) ；写一个对SelectionKey的逻辑操作的动作，再当有IO操作时，会回调这个动作，该方法会立即返回，之前任何的wakeup动作将会被消除不在生效，publicSelectedKeys会被清空</span><br><span class="line">    </span><br><span class="line">select(Consumer&lt;SelectionKey&gt; action)；跟selectNow(Consumer&lt;SelectionKey&gt; action)方法一样，只不过他是阻塞的，只有当至少有一个channel有IO操作时,或者selector#wakeup方法被调用，或者调用线程被中断,才会停止阻塞</span><br><span class="line">    </span><br><span class="line">select(Consumer&lt;SelectionKey&gt; action, <span class="keyword">long</span> timeout)；跟select(Consumer&lt;SelectionKey&gt; action)方法一样， 加了一个超时返回</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="SelectionKey"><a href="#SelectionKey" class="headerlink" title="SelectionKey"></a>SelectionKey</h3><p>是一个 SelectableChannel注册再Selector上的一个令牌，标识，叫做selection key</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">channel(); 返回当前selection key的Channel</span><br><span class="line">selector();返回当前selection key所在的selector</span><br><span class="line">isValid();当前这个key是否有效</span><br><span class="line">cancel(); 再selector上注销这个key</span><br><span class="line">interestOps();返回 当前key关注的operations</span><br><span class="line">interestOps(<span class="keyword">int</span> ops)；重新设置 当前key关注的operations</span><br><span class="line">interestOpsOr(<span class="keyword">int</span> ops);当前key关注的operations与指定的 operations按位或 ，取并集  </span><br><span class="line">interestOpsAnd(<span class="keyword">int</span> ops)当前key关注的operations与指定的 operations按位与    取交集</span><br><span class="line">readyOps();如果当前key的操作状态</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    看这段代码就知道readyOps和interestOps的区别了</span></span><br><span class="line"><span class="comment">    判断key是不是可读的</span></span><br><span class="line"><span class="comment">     public final boolean isReadable() &#123;</span></span><br><span class="line"><span class="comment">        return (readyOps() &amp; OP_READ) != 0;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">attach(Object ob)；这个方法不要想的太多，就是给key附加一个资源，方便调用资源或者识别这个key</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/10/database/%E9%9D%A2%E8%AF%95%E9%A2%98/sql%E8%A1%8C%E8%BD%AC%E5%88%97/" target="_blank">sql行转列面试题</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          忘忧症
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://NepenthesZGW.github.io/2020/06/20/framework/Netty/NIO/" title="NIO" target="_blank">https://NepenthesZGW.github.io/2020/06/20/framework/Netty/NIO/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/NepenthesZGW/NepenthesZGW.github.io/blob/master/LICENSE.TXT" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://nepentheszgw.github.io/2020/06/20/framework/Netty/NIO/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" class="archive-article-date">
-        <time datetime="2020-06-10T03:42:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/06/25/framework/Netty/netty%E9%87%8D%E8%A6%81%E5%90%8D%E8%AF%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          netty名词
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/20/framework/Netty/Netty%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">netty基础学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/10/java/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" target="_blank">动态绑定</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/10/java/oop/" class="archive-article-date">
-        <time datetime="2020-06-10T02:42:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/10/java/oop/" target="_blank">面向对象</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/09/java/Java/" class="archive-article-date">
-        <time datetime="2020-06-09T12:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/09/java/Java/" target="_blank">java</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/09/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-        <time datetime="2020-06-09T02:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/09/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" target="_blank">博客搭建</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+
+
 
 
           </div>
@@ -447,8 +498,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
