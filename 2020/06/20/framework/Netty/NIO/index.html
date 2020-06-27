@@ -18,7 +18,7 @@
 <meta property="og:description" content="同步,异步,阻塞,非阻塞同步和阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行， 异步和非阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行  同步阻塞：完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行，调用a1的线程不能动，必须等到a1执行完（调用线程就是a1的执行线程） 同步非阻塞：完成">
 <meta property="og:locale" content="zh">
 <meta property="article:published_time" content="2020-06-20T02:28:52.000Z">
-<meta property="article:modified_time" content="2020-06-22T14:19:14.620Z">
+<meta property="article:modified_time" content="2020-06-27T08:19:05.281Z">
 <meta property="article:author" content="忘忧症">
 <meta name="twitter:card" content="summary">
   
@@ -256,6 +256,8 @@
 <h3 id="异步和非阻塞："><a href="#异步和非阻塞：" class="headerlink" title="异步和非阻塞："></a>异步和非阻塞：</h3><p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行 </p>
 <h3 id="同步阻塞："><a href="#同步阻塞：" class="headerlink" title="同步阻塞："></a>同步阻塞：</h3><p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3不能执行，<strong>调用</strong>a1的线程不能动，必须等到a1执行完（调用线程就是a1的执行线程）</p>
 <h3 id="同步非阻塞："><a href="#同步非阻塞：" class="headerlink" title="同步非阻塞："></a>同步非阻塞：</h3><p>完成一件事，需要干a1,a2,a3这些事，a1在执行的情况下，a2,a3不能执行，<strong>调用</strong>a1的线程是活动的，就是a1在执行时，可以调用a2或者a3，但是为了同步 他不能干其他事，只能轮询看a1有没有执行完（调用线程与a1的执行线程不一样）</p>
+<a id="more"></a>
+
 <h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>（个人认为）首先我认为异步没有阻塞和非阻塞</p>
 <p>完成一件事，需要调用a1,a2,a3方法，a1在执行的情况下，a2,a3也可以执行 ，就是一个线程调用a1，a2,a3时不会立马执行，但是会交给其他线程执行（a1,a2,a3的执行线程都可以是调用线程，也可以不是），自己可以设置钩子，来让执行a1,a2,a3的线程进行回调</p>
 <p>异步就是内部进行一下包装，a1,a2,a3的执行跟彼此无关的，不知道谁先执行，谁后执行，反正最后回调钩子函数</p>
