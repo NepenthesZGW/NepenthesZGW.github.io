@@ -18,7 +18,7 @@
 <meta property="og:description" content="Spring学习补充CommonAnnotationBeanPostProcessor这个是Spring默认自带的一个外部公共注解的处理器 它主要是用来处理jdk自带的一些 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061">
 <meta property="og:locale" content="zh">
 <meta property="article:published_time" content="2020-08-09T06:02:16.708Z">
-<meta property="article:modified_time" content="2020-08-10T02:48:46.798Z">
+<meta property="article:modified_time" content="2020-09-04T05:05:11.359Z">
 <meta property="article:author" content="忘忧症">
 <meta name="twitter:card" content="summary">
   
@@ -232,7 +232,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">2.2k字</span>
+      <span class="post-count">2.4k字</span>
     </span>
   </span>
 
@@ -280,6 +280,33 @@
 
 <h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Primary</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">还有另一个名为 <span class="meta">@Primary</span> 的注解，我们也可以用来发生依赖注入的歧义时决定要注入哪个 bean。当存在多个相同类型的 bean 时，此注解定义了首选项。除非另有说明，否则将使用与 <span class="meta">@Primary</span> 注释关联的 bean 。</span><br><span class="line">我们来看一个例子：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">tomEmployee</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Employee(<span class="string">"Tom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Primary</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">johnEmployee</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Employee(<span class="string">"john"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在此示例中，两个方法都返回相同的 Employee类型。Spring 将注入的 bean 是方法 johnEmployee 返回的 bean。这是因为它包含 <span class="meta">@Primary</span> 注解。当我们想要指定默认情况下应该注入特定类型的 bean 时，此注解很有用。如果我们在某个注入点需要另一个 bean，我们需要专门指出它。我们可以通过 <span class="meta">@Qualifier</span> 注解来做到这一点。例如，我们可以通过使用 <span class="meta">@Qualifier</span> 注释来指定我们想要使用 tomEmployee 方法返回的 bean 。值得注意的是，如果 <span class="meta">@Qualifier</span> 和 <span class="meta">@Primary</span> 注释都存在，那么 <span class="meta">@Qualifier</span> 注释将具有优先权。基本上，<span class="meta">@Primary</span> 是定义了默认值，而 <span class="meta">@Qualifier</span> 则非常具体。当然 <span class="meta">@Component</span> 也可以使用 <span class="meta">@Primary</span> 注解，这次使用的还是上面<span class="number">3</span>的示例：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="meta">@Component</span></span><br><span class="line">     <span class="meta">@Primary</span></span><br><span class="line">     <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FooFormatter</span> <span class="keyword">implements</span> <span class="title">Formatter</span> </span>&#123;</span><br><span class="line">         <span class="function"><span class="keyword">public</span> String <span class="title">format</span><span class="params">()</span> </span>&#123;</span><br><span class="line">             <span class="keyword">return</span> <span class="string">"foo"</span>;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="meta">@Component</span></span><br><span class="line">     <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BarFormatter</span> <span class="keyword">implements</span> <span class="title">Formatter</span> </span>&#123;</span><br><span class="line">         <span class="function"><span class="keyword">public</span> String <span class="title">format</span><span class="params">()</span> </span>&#123;</span><br><span class="line">             <span class="keyword">return</span> <span class="string">"bar"</span>;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在这种情况下，<span class="meta">@Primary</span> 注解指定了默认注入的是 FooFormatter，消除了场景中的注入歧义。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">5</span>. 通过名称来自动注入</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在使用 <span class="meta">@Autowired</span> 进行自动装配时，如果 Spring 没有其他提示，将会按照需要注入的变量名称来寻找合适的 bean。也可以解决依赖注入歧义的问题。让我们看一些基于我们最初的例子的代码：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Component</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FooService</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Autowired</span></span><br><span class="line">        <span class="keyword">private</span> Formatter fooFormatter;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//todo </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在这种情况下，Spring 将确定要注入的 bean 是 FooFormatter，因为字段名称与我们在该 bean 的 <span class="meta">@Component</span>或者 <span class="meta">@Bean</span> 注解中使用的值(默认 <span class="meta">@Bean</span> 使用方法名)相匹配。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">6</span>. 总结</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">通过对 <span class="meta">@Qualifier</span> 的探讨，我们知道该注解是用来消除依赖注入冲突的。这种在日常开发，比如 Rabbtimq 的队列声明中很常见。小胖哥也通过该注解和其他上述注解的组合使用和对比中展示了一些常用的用法。这将有助于你对 Spring 的依赖注入机制的了解。</span><br></pre></td></tr></table></figure>
 
+
+
+
+
+<h2 id="Role注解"><a href="#Role注解" class="headerlink" title="@Role注解"></a>@Role注解</h2><ol>
+<li>标识Bean的类别</li>
+<li>种类： <ol>
+<li>ROLE_APPLICATION = 0 <ul>
+<li>bean的默认角色</li>
+<li>标识应用的主要的主要角色</li>
+<li>通常对应于用户定义的bean</li>
+</ul>
+</li>
+<li>ROLE_SUPPORT = 1 <ul>
+<li>标识较大配置的一部分</li>
+<li>通常是仔细观察特定的ComponentDefinition时重要的提示，而不是体现在应用中</li>
+</ul>
+</li>
+<li>ROLE_INFRASTRUCTURE = 2 <ul>
+<li>标识后台角色，与最终用户无关</li>
+<li>通常供是内部工作的bean使用</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>作用 ： 目前不晓得</li>
+</ol>
 
     
 
